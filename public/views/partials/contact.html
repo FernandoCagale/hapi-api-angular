@@ -1,0 +1,29 @@
+<!doctype html> 
+<html ng-app="app"> 
+	<head> 
+		<meta charset="UTF-8">
+	</head> 
+	<body>
+		<div class="jumbotron">
+			
+			<h3>Lista Contatos</h3>
+			<div ng-include="'partials/header.html'"></div>
+			
+			<input class="form-control" type="text" ng-model="criterio" placeholder="O que você está buscando?"/>
+			<hr/>
+			<table class="table table-striped">	
+				<tr>
+					<th>Nome</th>
+					<th>Telefone</th>
+				</tr>
+				<tr ng-repeat="contact in contacts | filter:criterio">
+					<td>{{contact.name}}</td>
+					<td>{{contact.telephone}}</td>
+				</tr>
+			</table>
+
+			<button class="btn btn-primary btn-block" disabled="true">Adicionar Contato</button>
+
+		</div>
+	</body> 
+</html> 

@@ -1,0 +1,29 @@
+<!doctype html> 
+<html ng-app="app"> 
+	<head> 
+		<meta charset="UTF-8">
+	</head> 
+	<body>
+		<div class="jumbotron">
+			
+			<h3>Lista Operadoras</h3>
+			<div ng-include="'partials/header.html'"></div>
+
+			<input class="form-control" type="text" ng-model="criterio" placeholder="O que você está buscando?"/>
+			<hr/>
+			<table class="table table-striped">	
+				<tr>
+					<th>Descrição</th>
+					<th>Valor</th>
+				</tr>
+				<tr ng-repeat="operator in operators | filter:criterio">
+					<td>{{operator.description}}</td>
+					<td>{{operator.value}}</td>
+				</tr>
+			</table>
+
+			<button class="btn btn-primary btn-block" disabled="true">Adicionar Operadora</button>
+
+		</div>
+	</body> 
+</html> 
