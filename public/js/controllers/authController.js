@@ -1,4 +1,4 @@
-app.controller('authController', ['$scope', 'authFactory', '$location',   function ($scope, contactFactory, $location) {
+angular.module("app").controller('authController', ['$scope', 'authFactory', '$location',   function ($scope, contactFactory, $location) {
 
     $scope.contacts = null;
     $scope.message = null;

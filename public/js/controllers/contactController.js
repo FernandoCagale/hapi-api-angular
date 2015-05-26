@@ -1,4 +1,4 @@
-app.controller('contactController', ['$scope', 'contactFactory',  function ($scope, contactFactory) {
+angular.module("app").controller('contactController', ['$scope', 'contactFactory',  function ($scope, contactFactory) {
 
     $scope.contacts = null;
     $scope.status = null;

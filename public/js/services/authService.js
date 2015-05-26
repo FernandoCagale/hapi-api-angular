@@ -1,8 +1,8 @@
 'use strict';
 
-app.factory('authFactory', ['$http', function($http) {
+angular.module("app").factory('authFactory', function($http, config) {
 
-    var baseUrl = 'http://localhost:777/api/v1/auth';
+    var baseUrl = config.baseUrl+'/api/v1/auth';
 
     var authFactory = {};
 
@@ -15,4 +15,4 @@ app.factory('authFactory', ['$http', function($http) {
     };
 
     return authFactory;
-}]);
+});

@@ -1,4 +1,4 @@
-app.controller('homeController', ['$scope', 'userFactory','$location',  function ($scope, userFactory, $location) {
+angular.module("app").controller('homeController', ['$scope', 'userFactory','$location',  function ($scope, userFactory, $location) {
 
     $scope.home = 'Home';
 

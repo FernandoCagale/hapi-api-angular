@@ -1,4 +1,4 @@
-app.controller('operatorController', ['$scope', 'operatorFactory',  function ($scope, operatorFactory) {
+angular.module("app").controller('operatorController', ['$scope', 'operatorFactory',  function ($scope, operatorFactory) {
 
     $scope.operators = null;
     $scope.status = null;

@@ -1,4 +1,4 @@
-app.controller('userController', ['$scope', 'userFactory',  function ($scope, userFactory) {
+angular.module("app").controller('userController', ['$scope', 'userFactory',  function ($scope, userFactory) {
 
     $scope.users = null;
 

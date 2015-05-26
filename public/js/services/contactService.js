@@ -1,8 +1,8 @@
 'use strict';
 
-app.factory('contactFactory', ['$http', function($http) {
+angular.module("app").factory('contactFactory', function($http, config) {
 
-    var baseUrl = 'http://localhost:777/api/v1/contacts';
+    var baseUrl = config.baseUrl+'/api/v1/contacts';
 
     var contactFactory = {};
 
@@ -27,4 +27,4 @@ app.factory('contactFactory', ['$http', function($http) {
     };
 
     return contactFactory;
-}]);
+});
