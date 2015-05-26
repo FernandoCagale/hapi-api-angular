@@ -6,6 +6,8 @@ angular.module("app").factory('authInterceptor', function($q, $location) {
 
             var token = $.jStorage.get('authorization');
 
+            console.log(config.url)
+
             if (config.url == 'partials/auth.html')
               $.jStorage.set('authorization', null);
 
