@@ -4,12 +4,16 @@
     <base href="/">
     <title></title>
 
-    <!-- build:css css/index.min.css --> 
+    <!-- build:css css/index.min.css -->
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/formoid-metro-cyan.css">
     <!-- endbuild -->
 
-    <!-- build:js js/index.min.js --> 
+    <!-- build:js js/index.min.js -->
+    <script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+
     <script type="text/javascript" src="lib/angular/angular.min.js"></script>
     <script type="text/javascript" src="lib/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="lib/jStorage/jstorage.min.js"></script>
@@ -28,7 +32,7 @@
     <!-- endbuild -->
 
   </head>
-  <body>
+  <body class="layout-fixed">
 
     <div ng-view></div>
 

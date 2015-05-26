@@ -6,32 +6,24 @@ var app = angular.module('app', ['ngRoute'])
    	$httpProvider.interceptors.push('authInterceptor');
 
     $routeProvider.when('/', {
-        templateUrl: 'partials/main.html', 
+        templateUrl: 'partials/main.html',
         controller: 'homeController'
-    });
-
-    $routeProvider.when('/user', {
-        templateUrl: 'partials/user.html', 
+    }).when('/user', {
+        templateUrl: 'partials/user.html',
         controller: 'userController'
-    });
-
-    $routeProvider.when('/contact', {
-        templateUrl: 'partials/contact.html', 
+    }).when('/contact', {
+        templateUrl: 'partials/contact.html',
         controller: 'contactController'
-    });  
-
-    $routeProvider.when('/operator', {
-        templateUrl: 'partials/operator.html', 
+    }).when('/operator', {
+        templateUrl: 'partials/operator.html',
         controller: 'operatorController'
-    });  
-
-    $routeProvider.when('/auth', {
-        templateUrl: 'partials/auth.html', 
+    }).when('/auth', {
+        templateUrl: 'partials/auth.html',
         controller: 'authController'
-    });        
+    }).otherwise({
+      redirecTo: '/auth'
+    });
 
     $locationProvider.html5Mode(true);
-    
+
 }]);
-
-

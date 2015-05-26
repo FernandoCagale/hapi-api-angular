@@ -2,7 +2,7 @@
 
 app.factory('authFactory', ['$http', function($http) {
 
-    var baseUrl = 'http://'+process.env.NODE_HOST+':'+process.env.NODE_PORT+'/api/v1/auth';
+    var baseUrl = 'http://localhost:777/api/v1/auth';
 
     var authFactory = {};
 

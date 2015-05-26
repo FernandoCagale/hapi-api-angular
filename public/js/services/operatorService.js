@@ -2,7 +2,7 @@
 
 app.factory('operatorFactory', ['$http', function($http) {
 
-    var baseUrl = 'http://'+process.env.NODE_HOST+':'+process.env.NODE_PORT+'/api/v1/operators';
+    var baseUrl = 'http://localhost:777/api/v1/operators';
 
     var operatorFactory = {};
 

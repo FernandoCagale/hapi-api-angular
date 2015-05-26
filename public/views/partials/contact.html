@@ -1,29 +1,31 @@
-<!doctype html> 
-<html ng-app="app"> 
-	<head> 
+<!doctype html>
+<html ng-app="app">
+	<head>
 		<meta charset="UTF-8">
-	</head> 
+	</head>
 	<body>
-		<div class="jumbotron">
-			
-			<h3>Lista Contatos</h3>
-			<div ng-include="'partials/header.html'"></div>
-			
+		<div ng-include="'partials/header.html'"></div>
+		<form class="formoid-metro-cyan" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;max-width:480px;min-width:150px">
+			<div class="title">
+				<h2>Lista Contatos</h2>
+			</div>
+
 			<input class="form-control" type="text" ng-model="criterio" placeholder="O que você está buscando?"/>
-			<hr/>
-			<table class="table table-striped">	
+			<table class="table table-striped">
 				<tr>
 					<th>Nome</th>
 					<th>Telefone</th>
 				</tr>
 				<tr ng-repeat="contact in contacts | filter:criterio">
 					<td>{{contact.name}}</td>
-					<td>{{contact.telephone}}</td>
+					<td>{{contact.phone}}</td>
 				</tr>
 			</table>
 
-			<button class="btn btn-primary btn-block" disabled="true">Adicionar Contato</button>
-
-		</div>
-	</body> 
-</html> 
+			
+			<div class="submit">
+				<input type="submit" value="Adicionar Contato">
+			</div>
+		</form>
+	</body>
+</html>
