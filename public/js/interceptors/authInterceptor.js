@@ -21,6 +21,7 @@ angular.module("app").factory('authInterceptor', function($q, $location) {
             if (resposta.status == 401) {
               $location.path('/auth');
             }
+            console.log(resposta.status)
             return $q.reject(resposta);
         }
     }

@@ -21,7 +21,7 @@ angular.module('app', ['ngRoute'])
         templateUrl: 'partials/auth.html',
         controller: 'authController'
     }).otherwise({
-      redirectTo: '/auth'
+        redirectTo: '/'
     });
 
     $locationProvider.html5Mode(true);
