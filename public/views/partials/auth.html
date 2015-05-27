@@ -1,34 +1,22 @@
-<!doctype html>
-<html ng-app="app">
-	<head>
-		<meta charset="UTF-8">
-	</head>
-	<body>
+<form class="formoid-metro-cyan" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;max-width:480px;min-width:150px">
 
-		<form class="formoid-metro-cyan" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;max-width:480px;min-width:150px">
+	<div class="title">
+		<h2>Logar API</h2>
+	</div>
+	{{message}}
 
-				<div class="title">
-					<h2>Logar API</h2>
-				</div>
-				{{message}}
+	<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-user"></i></span>
+			<input type="text" placeholder="E-mail" ng-model="user.email" name="email" class="form-control" ng-required="true">
+	</div>
 
-				<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-user"></i></span>
-						<input type="text" placeholder="E-mail" ng-model="user.email" name="email" class="form-control" ng-required="true">
-				</div>
+	<div class="input-group">
+			<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+			<input class="form-control" type="password" ng-model="user.password" name="password" placeholder="Senha" ng-required="true" ng-minlength="2">
+	</div>
 
-				<div class="input-group">
-						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-						<input class="form-control" type="password" ng-model="user.password" name="password" placeholder="Senha" ng-required="true" ng-minlength="2">
-				</div>
+	<div class="submit">
+		<input class="submit" type="submit" value="Logar" ng-click="login(user)"/>
+	</div>
 
-				<div class="submit">
-					<input class="submit" type="submit" value="Logar" ng-click="login(user)"/>
-				</div>
-
-
-
-			</form>
-
-	</body>
-</html>
+</form>

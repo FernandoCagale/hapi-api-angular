@@ -24,6 +24,6 @@ angular.module('app', ['ngRoute'])
         redirectTo: '/'
     });
 
-    $locationProvider.html5Mode(true);
+
 
 }]);

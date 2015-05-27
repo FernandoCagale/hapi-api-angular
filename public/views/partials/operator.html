@@ -1,31 +1,23 @@
-<!doctype html>
-<html ng-app="app">
-	<head>
-		<meta charset="UTF-8">
-	</head>
-	<body>
-		<div ng-include="'partials/header.html'"></div>
-		<form class="formoid-metro-cyan" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;max-width:480px;min-width:150px">
-			<div class="title">
-				<h2>Lista Operadoras</h2>
-			</div>
+<div ng-include="'partials/header.html'"></div>
+<form class="formoid-metro-cyan" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;max-width:480px;min-width:150px">
+	<div class="title">
+		<h2>Lista Operadoras</h2>
+	</div>
 
-			<input class="form-control" type="text" ng-model="criterio" placeholder="O que você está buscando?"/>
-			<table class="table table-striped">
-				<tr>
-					<th>Descrição</th>
-					<th>Valor</th>
-				</tr>
-				<tr ng-repeat="operator in operators | filter:criterio">
-					<td>{{operator.description}}</td>
-					<td>{{operator.value}}</td>
-				</tr>
-			</table>
+	<input class="form-control" type="text" ng-model="criterio" placeholder="O que você está buscando?"/>
+	<table class="table table-striped">
+		<tr>
+			<th>Descrição</th>
+			<th>Valor</th>
+		</tr>
+		<tr ng-repeat="operator in operators | filter:criterio">
+			<td>{{operator.description}}</td>
+			<td>{{operator.value}}</td>
+		</tr>
+	</table>
 
-			<div class="submit">
-				<input type="submit" value="Adicionar Operadora">
-			</div>
+	<div class="submit">
+		<input type="submit" value="Adicionar Operadora">
+	</div>
 
-		</form>
-	</body>
-</html>
+</form>
