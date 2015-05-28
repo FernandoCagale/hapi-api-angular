@@ -39,13 +39,87 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
     $translateProvider.usePostCompiling(true);
     */
 
-    $translateProvider.translations('en', {
-      TITLE: 'Hello',
-    });
     $translateProvider.translations('pt', {
-      TITLE: 'Olá',
+      GENERICO:{
+        PESQUISAR: 'Pesquisar por:'
+      },
+      LOGIN:{
+        TITLE: 'Entrar API',
+        EMAIL: 'E-mail',
+        SENHA: 'Senha',
+        ENTRAR: 'Entrar',
+      },
+      IDIOMA:{
+        PORTUGUES: 'Português',
+        INGLES: 'Inglês',
+      },
+      MENU:{
+        HOME : 'Inicio',
+        USUARIO: 'Usuário',
+        OPERADORA: 'Operadora',
+        CONTATO: 'Contato',
+        SAIR: 'Sair'
+      },
+      CONTATO:{
+        TITULO: 'Lista Contato',
+        NOME: 'Nome',
+        TELEFONE: 'Telefone',
+        ADD: 'Adicionar Contato'
+      },
+      USUARIO:{
+        TITULO: 'Lista Usuário',
+        NOME: 'Nome',
+        SOBRENOME: 'Sobrenome',
+        ADD: 'Adicionar Usuário'
+      },
+      OPERADORA:{
+        TITULO: 'Lista Operadora',
+        DESCRICAO: 'Descrição',
+        VALOR: 'Valor',
+        ADD: 'Adicionar Operadora'
+      }         
     });
-    $translateProvider.preferredLanguage('en');
+    $translateProvider.translations('en', {
+      GENERICO:{
+        PESQUISAR: 'Search for:'
+      },        
+      LOGIN:{
+        TITLE: 'Enter API',
+        EMAIL: 'E-mail',
+        SENHA: 'Password',
+        ENTRAR: 'Enter',
+      },        
+      IDIOMA:{
+        PORTUGUES: 'Portuguese',
+        INGLES: 'English',
+      },        
+      MENU:{
+        HOME : 'Home',
+        USUARIO: 'User',
+        OPERADORA: 'Operator',
+        CONTATO: 'Contact',
+        SAIR: 'Logout'
+      },
+      CONTATO:{
+        TITULO: 'List Contact',
+        NOME: 'Name',
+        TELEFONE: 'Phone',
+        ADD: 'Add Contact'
+      },
+      USUARIO:{
+        TITULO: 'List User',
+        NOME: 'Name',
+        SOBRENOME: 'Last Name',
+        ADD: 'Add User'
+      },
+      OPERADORA:{
+        TITULO: 'List Operator',
+        DESCRICAO: 'Description',
+        VALOR: 'Value',
+        ADD: 'Add Operator'
+      } 
+    });
+    $translateProvider.preferredLanguage('pt');
 
     $translateProvider.useSanitizeValueStrategy('escaped');
 

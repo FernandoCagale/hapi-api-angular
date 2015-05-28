@@ -1,14 +1,14 @@
 <div ng-include="'partials/header.html'"></div>
 <form class="formoid-metro-cyan" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;max-width:480px;min-width:150px">
 	<div class="title">
-		<h2>Lista Contatos</h2>
+		<h2>{{ 'USUARIO.TITULO' | translate }}</h2>
 	</div>
 
-	<input class="form-control" type="text" ng-model="criterio" placeholder="O que você está buscando?"/>
+	<input class="form-control" type="text" ng-model="criterio" placeholder="{{ 'GENERICO.PESQUISAR' | translate }}"/>
 	<table class="table table-striped">
 		<tr>
-			<th>Nome</th>
-			<th>Sobrenome</th>
+			<th>{{ 'USUARIO.NOME' | translate }}</th>
+			<th>{{ 'USUARIO.SOBRENOME' | translate }}</th>
 		</tr>
 		<tr ng-repeat="user in users | filter:criterio">
 			<td>{{user.name}}</td>
@@ -17,6 +17,6 @@
 	</table>
 
 	<div class="submit">
-		<input type="submit" value="Adicionar Contato">
+		<input type="submit" value="{{ 'USUARIO.ADD' | translate }}">
 	</div>
 </form>
