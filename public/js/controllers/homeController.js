@@ -1,10 +1,9 @@
-angular.module("app").controller('homeController', ['$scope', 'userFactory','$location',  function ($scope, userFactory, $location) {
+angular.module("app").controller('homeController', ['$scope', '$translate', function ($scope, $translate) {
 
     $scope.home = 'Home';
 
-    $scope.isActive = function (viewLocation) {
-     	var active = (viewLocation === $location.path());
-    	return active;
-	};
+    $scope.changeLanguage = function (key) {
+      $translate.use(key);
+    };
 
 }]);

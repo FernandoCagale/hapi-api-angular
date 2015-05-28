@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('app', ['ngRoute'])
-    .config(['$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
+angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
+    .config(['$routeProvider', '$locationProvider', '$httpProvider',
+    function($routeProvider, $locationProvider, $httpProvider) {
 
    	$httpProvider.interceptors.push('authInterceptor');
 
@@ -25,5 +26,27 @@ angular.module('app', ['ngRoute'])
     });
 
 
+
+}]).config(['$translateProvider', function ($translateProvider) {
+
+    /*
+    $translateProvider.useStaticFilesLoader({
+        prefix : '/i18n/',
+        suffix : '.json'
+    });
+
+    $translateProvider.useLocalStorage();
+    $translateProvider.usePostCompiling(true);
+    */
+
+    $translateProvider.translations('en', {
+      TITLE: 'Hello',
+    });
+    $translateProvider.translations('pt', {
+      TITLE: 'Olá',
+    });
+    $translateProvider.preferredLanguage('en');
+
+    $translateProvider.useSanitizeValueStrategy('escaped');
 
 }]);

@@ -3,6 +3,12 @@
 
 	<div class="title">
 		<h2>{{home}}</h2>
+		
+		<h3>{{ 'TITLE' | translate }}</h3>
+
+		<input class="submit" type="submit" value="1º" ng-click="changeLanguage('en')"/>
+		<input class="submit" type="submit" value="2º" ng-click="changeLanguage('pt')"/>
+
 	</div>
 
 </form>
