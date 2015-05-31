@@ -77,22 +77,22 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
         DESCRICAO: 'Descrição',
         VALOR: 'Valor',
         ADD: 'Adicionar Operadora'
-      }         
+      }
     });
     $translateProvider.translations('en', {
       GENERICO:{
         PESQUISAR: 'Search for:'
-      },        
+      },
       LOGIN:{
         TITLE: 'Enter API',
         EMAIL: 'E-mail',
         SENHA: 'Password',
         ENTRAR: 'Enter',
-      },        
+      },
       IDIOMA:{
         PORTUGUES: 'Portuguese',
         INGLES: 'English',
-      },        
+      },
       MENU:{
         HOME : 'Home',
         USUARIO: 'User',
@@ -117,7 +117,7 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
         DESCRICAO: 'Description',
         VALOR: 'Value',
         ADD: 'Add Operator'
-      } 
+      }
     });
     $translateProvider.preferredLanguage('pt');
 

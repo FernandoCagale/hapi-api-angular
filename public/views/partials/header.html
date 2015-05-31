@@ -1,16 +1,30 @@
-<div id="navbarCollapse" class="collapse navbar-collapse">
-  <ul class="nav navbar-nav">
-      <li><a href="#/">{{ 'MENU.HOME' | translate }}</a></li>
+<nav role="navigation" class="navbar navbar-default">
+
+  <div class="navbar-header">
+      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+          <span class="sr-only">Navegação Responsiva</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a href="#/" class="navbar-brand">{{ 'MENU.HOME' | translate }}</a>
+  </div>
+
+  <div id="navbarCollapse" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li></li>
       <li><a href="#/user">{{ 'MENU.USUARIO' | translate }}</a></li>
       <li><a href="#/operator">{{ 'MENU.OPERADORA' | translate }}</a></li>
       <li><a href="#/contact">{{ 'MENU.CONTATO' | translate }}</a></li>
-  </ul>
+    </ul>
 
-  <ul class="nav navbar-nav navbar-right">
-    <li><a ng-click="changeLanguage('pt')">{{ 'IDIOMA.PORTUGUES' | translate }}</a></li>
-    <li><a ng-click="changeLanguage('en')">{{ 'IDIOMA.INGLES' | translate }}</a></li>
-  	<li><a href="#/auth">{{ 'MENU.SAIR' | translate }}</a></li>
-  </ul>
-</div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a ng-click="changeLanguage('pt')">{{ 'IDIOMA.PORTUGUES' | translate }}</a></li>
+      <li><a ng-click="changeLanguage('en')">{{ 'IDIOMA.INGLES' | translate }}</a></li>
+      <li><a href="#/auth">{{ 'MENU.SAIR' | translate }}</a></li>
+    </ul>
+
+  </div>
 
 
+</nav>
