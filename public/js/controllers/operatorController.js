@@ -1,4 +1,4 @@
-angular.module("app").controller('operatorController', ['$scope', 'operatorFactory',  function ($scope, operatorFactory) {
+angular.module("app").controller('operatorController', ['$scope', 'operatorFactory', '$location',  function ($scope, operatorFactory, $location) {
 
     $scope.operators = null;
     $scope.status = null;
@@ -14,6 +14,25 @@ angular.module("app").controller('operatorController', ['$scope', 'operatorFacto
                 console.log("Error..."+ error.message);
             });
     };
+
+    $scope.save = function(operator) {
+        operatorFactory.insert(operator)
+            .success(function (data) {
+                console.log("Sucesso...");
+                $scope.list();
+            })
+            .error(function (error) {
+                console.log("Error..."+ error.message);
+            });        
+    };    
+
+    $scope.data = function(){
+        $location.path('operator-data');
+    };
+
+    $scope.list = function(){
+        $location.path('operator');
+    };    
 
     getOperators();
 }]);

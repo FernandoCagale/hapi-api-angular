@@ -12,12 +12,21 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
     }).when('/user', {
         templateUrl: 'partials/user.html',
         controller: 'userController'
+    }).when('/user-data', {
+        templateUrl: 'partials/user-data.html',
+        controller: 'userController'        
     }).when('/contact', {
         templateUrl: 'partials/contact.html',
         controller: 'contactController'
+    }).when('/contact-data', {
+        templateUrl: 'partials/contact-data.html',
+        controller: 'contactController'          
     }).when('/operator', {
         templateUrl: 'partials/operator.html',
         controller: 'operatorController'
+    }).when('/operator-data', {
+        templateUrl: 'partials/operator-data.html',
+        controller: 'operatorController'        
     }).when('/auth', {
         templateUrl: 'partials/auth.html',
         controller: 'authController'
@@ -41,7 +50,9 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
 
     $translateProvider.translations('pt', {
       GENERICO:{
-        PESQUISAR: 'Pesquisar por:'
+        PESQUISAR: 'Pesquisar por:',
+        SALVAR: 'Salvar',
+        CANCELAR: 'Cancelar'
       },
       LOGIN:{
         TITLE: 'Entrar API',
@@ -62,18 +73,24 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
       },
       CONTATO:{
         TITULO: 'Lista Contato',
+        TITULO_DADOS: 'Dados do Contato',
         NOME: 'Nome',
         TELEFONE: 'Telefone',
+        OPERADORA: 'Operadora',
         ADD: 'Adicionar Contato'
       },
       USUARIO:{
         TITULO: 'Lista Usuário',
+        TITULO_DADOS: 'Dados do Usuário',
         NOME: 'Nome',
         SOBRENOME: 'Sobrenome',
+        EMAIL: 'E-mail',
+        SENHA: 'Senha',
         ADD: 'Adicionar Usuário'
       },
       OPERADORA:{
         TITULO: 'Lista Operadora',
+        TITULO_DADOS: 'Dados da Operadora',
         DESCRICAO: 'Descrição',
         VALOR: 'Valor',
         ADD: 'Adicionar Operadora'
@@ -81,7 +98,9 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
     });
     $translateProvider.translations('en', {
       GENERICO:{
-        PESQUISAR: 'Search for:'
+        PESQUISAR: 'Search for:',
+        SALVAR: 'Save',
+        CANCELAR: 'Cancel'        
       },
       LOGIN:{
         TITLE: 'Enter API',
@@ -102,18 +121,24 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
       },
       CONTATO:{
         TITULO: 'List Contact',
+        TITULO_DADOS: 'Contact data',
         NOME: 'Name',
         TELEFONE: 'Phone',
+        OPERADORA: 'Contact',
         ADD: 'Add Contact'
       },
       USUARIO:{
         TITULO: 'List User',
+        TITULO_DADOS: 'User data',
         NOME: 'Name',
         SOBRENOME: 'Last Name',
+        EMAIL: 'E-mail',
+        SENHA: 'Password',        
         ADD: 'Add User'
       },
       OPERADORA:{
         TITULO: 'List Operator',
+        TITULO_DADOS: 'Operator data',
         DESCRICAO: 'Description',
         VALOR: 'Value',
         ADD: 'Add Operator'
