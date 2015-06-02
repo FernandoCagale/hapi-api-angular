@@ -14,19 +14,19 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
         controller: 'userController'
     }).when('/user-data', {
         templateUrl: 'partials/user-data.html',
-        controller: 'userController'        
+        controller: 'userController'
     }).when('/contact', {
         templateUrl: 'partials/contact.html',
         controller: 'contactController'
     }).when('/contact-data', {
         templateUrl: 'partials/contact-data.html',
-        controller: 'contactController'          
+        controller: 'contactController'
     }).when('/operator', {
         templateUrl: 'partials/operator.html',
         controller: 'operatorController'
     }).when('/operator-data', {
         templateUrl: 'partials/operator-data.html',
-        controller: 'operatorController'        
+        controller: 'operatorController'
     }).when('/auth', {
         templateUrl: 'partials/auth.html',
         controller: 'authController'
@@ -100,7 +100,7 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
       GENERICO:{
         PESQUISAR: 'Search for:',
         SALVAR: 'Save',
-        CANCELAR: 'Cancel'        
+        CANCELAR: 'Cancel'
       },
       LOGIN:{
         TITLE: 'Enter API',
@@ -124,7 +124,7 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
         TITULO_DADOS: 'Contact data',
         NOME: 'Name',
         TELEFONE: 'Phone',
-        OPERADORA: 'Contact',
+        OPERADORA: 'Operator',
         ADD: 'Add Contact'
       },
       USUARIO:{
@@ -133,7 +133,7 @@ angular.module('app', ['ngRoute','ngCookies', 'pascalprecht.translate'])
         NOME: 'Name',
         SOBRENOME: 'Last Name',
         EMAIL: 'E-mail',
-        SENHA: 'Password',        
+        SENHA: 'Password',
         ADD: 'Add User'
       },
       OPERADORA:{

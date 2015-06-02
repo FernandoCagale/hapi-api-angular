@@ -4,6 +4,10 @@
 		<h2>{{ 'USUARIO.TITULO_DADOS' | translate }}</h2>
 	</div>
 
+	<div class="title">
+		<h5>{{message}}</h5>
+	</div>
+
 	<div class="element-input">
 		<label class="title">{{ 'USUARIO.NOME' | translate }}:<span class="required" aria-required="true">*</span></label>
 		<input type="text" required="required" name="name" ng-model="user.name" class="large" >
@@ -12,22 +16,22 @@
 	<div class="element-input">
 		<label class="title">{{ 'USUARIO.SOBRENOME' | translate }}:<span class="required" aria-required="true">*</span></label>
 		<input type="text" required="required" name="lastName" ng-model="user.lastName" class="large" aria-required="true">
-	</div>	
+	</div>
 
 	<div class="element-email">
 		<label class="title">{{ 'USUARIO.EMAIL' | translate }}:<span class="required" aria-required="true">*</span></label>
 		<input type="email" required="required" value="" name="email" ng-model="user.email" class="large" aria-required="true">
-	</div>	
+	</div>
 
 	<div class="element-input">
 		<label class="title">{{ 'USUARIO.SENHA' | translate }}:<span class="required" aria-required="true">*</span></label>
-		<input type="text" required="required" name="password" ng-model="user.password" class="large" aria-required="true">
-	</div>	
+		<input type="password" required="required" name="password" ng-model="user.password" class="large" aria-required="true">
+	</div>
 
 
 	<div class="submit">
 		<input type="submit" value="{{ 'GENERICO.SALVAR' | translate }}" ng-click="save(user)" style="width: 110px">
 		<input type="submit" value="{{ 'GENERICO.CANCELAR' | translate }}" ng-click="list()" style="width: 110px">
-	</div>	
+	</div>
 
 </form>

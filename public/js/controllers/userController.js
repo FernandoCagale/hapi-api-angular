@@ -1,14 +1,15 @@
 angular.module("app").controller('userController', ['$scope', 'userFactory', '$location',  function ($scope, userFactory, $location) {
 
     $scope.users = null;
+    $scope.message = null;
 
     var getUsers = function() {
         userFactory.find()
             .success(function (data) {
                 $scope.users = data;
-                console.log("Sucesso...");
             })
             .error(function (error) {
+                $scope.message = "Error..."+ error.message;
                 console.log("Error..."+ error.message);
             });
     };
@@ -16,12 +17,12 @@ angular.module("app").controller('userController', ['$scope', 'userFactory', '$l
     $scope.save = function(user) {
         userFactory.insert(user)
             .success(function (data) {
-                console.log("Sucesso...");
                 $scope.list();
             })
             .error(function (error) {
+                $scope.message = "Error..."+ error.message;
                 console.log("Error..."+ error.message);
-            });        
+            });
     };
 
     $scope.data = function(){
@@ -30,7 +31,7 @@ angular.module("app").controller('userController', ['$scope', 'userFactory', '$l
 
     $scope.list = function(){
         $location.path('user');
-    };    
+    };
 
     getUsers();
 }]);

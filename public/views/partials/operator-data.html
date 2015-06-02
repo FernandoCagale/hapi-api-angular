@@ -4,6 +4,10 @@
 		<h2>{{ 'OPERADORA.TITULO_DADOS' | translate }}</h2>
 	</div>
 
+	<div class="title">
+		<h5>{{message}}</h5>
+	</div>	
+
 	<div class="element-input">
 		<label class="title">{{ 'OPERADORA.DESCRICAO' | translate }}:<span class="required" aria-required="true">*</span></label>
 		<input type="text" required="required" name="description" ng-model="operator.description" class="large" >
@@ -12,11 +16,11 @@
 	<div class="element-input">
 		<label class="title">{{ 'OPERADORA.VALOR' | translate }}:<span class="required" aria-required="true">*</span></label>
 		<input type="text" required="required" name="value" ng-model="operator.value" class="large" aria-required="true">
-	</div>	
+	</div>
 
 	<div class="submit">
 		<input type="submit" value="{{ 'GENERICO.SALVAR' | translate }}" ng-click="save(operator)" style="width: 110px">
 		<input type="submit" value="{{ 'GENERICO.CANCELAR' | translate }}" ng-click="list()" style="width: 110px">
-	</div>	
+	</div>
 
 </form>

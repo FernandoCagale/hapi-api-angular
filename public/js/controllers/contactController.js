@@ -2,16 +2,15 @@ angular.module("app").controller('contactController', ['$scope', 'contactFactory
 
     $scope.contacts = null;
     $scope.operators = null;
-    $scope.status = null;
+    $scope.message = null;
 
     var getContacts = function() {
         contactFactory.find()
             .success(function (data) {
                 $scope.contacts = data;
-                console.log("Sucesso...");
             })
             .error(function (error) {
-                $scope.status = "Ocorreu um problema: "+ error.message;
+                $scope.message = "Ocorreu um problema: "+ error.message;
                 console.log("Error..."+ error.message);
             });
     };
@@ -20,11 +19,11 @@ angular.module("app").controller('contactController', ['$scope', 'contactFactory
         operatorFactory.find()
             .success(function (data) {
                 $scope.operators = data;
-                console.log("Sucesso...");
             })
             .error(function (error) {
+              $scope.message = "Ocorreu um problema: "+ error.message;
                 console.log("Error..."+ error.message);
-            });        
+            });
     };
 
     $scope.save = function(contact) {
@@ -36,12 +35,12 @@ angular.module("app").controller('contactController', ['$scope', 'contactFactory
 
         contactFactory.insert(contact)
             .success(function (data) {
-                console.log("Sucesso...");
                 $scope.list();
             })
             .error(function (error) {
+                $scope.message = "Ocorreu um problema: "+ error.message;
                 console.log("Error..."+ error.message);
-            });        
+            });
     };
 
     $scope.data = function(){

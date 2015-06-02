@@ -4,6 +4,10 @@
 		<h2>{{ 'CONTATO.TITULO_DADOS' | translate }}</h2>
 	</div>
 
+	<div class="title">
+		<h5>{{message}}</h5>
+	</div>
+	
 	<div class="element-input">
 		<label class="title">{{ 'CONTATO.NOME' | translate }}:<span class="required" aria-required="true">*</span></label>
 		<input type="text" required="required" name="name" ng-model="contact.name" class="large" >
@@ -12,18 +16,18 @@
 	<div class="element-input">
 		<label class="title">{{ 'CONTATO.TELEFONE' | translate }}:<span class="required" aria-required="true">*</span></label>
 		<input type="text" required="required" name="phone" ng-model="contact.phone" class="large">
-	</div>	
+	</div>
 
 	<div class="element-input" style="width: 432px">
 		<label class="title">{{ 'CONTATO.OPERADORA' | translate }}:<span class="required" aria-required="true">*</span></label>
 		<select class="title" required="required" ng-model="contact.operator" ng-options="operator.description for operator in operators">
 			<option value="">Selecione uma operadora</option>
 		</select>
-	</div>	
+	</div>
 
 	<div class="submit">
 		<input type="submit" value="{{ 'GENERICO.SALVAR' | translate }}" ng-click="save(contact)" style="width: 110px">
 		<input type="submit" value="{{ 'GENERICO.CANCELAR' | translate }}" ng-click="list()" style="width: 110px">
-	</div>	
+	</div>
 
 </form>

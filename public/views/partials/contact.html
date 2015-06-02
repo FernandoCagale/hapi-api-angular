@@ -9,10 +9,12 @@
 		<tr>
 			<th>{{ 'CONTATO.NOME' | translate }}</th>
 			<th>{{ 'CONTATO.TELEFONE' | translate }}</th>
+			<th>{{ 'CONTATO.OPERADORA' | translate }}</th>
 		</tr>
 		<tr ng-repeat="contact in contacts | filter:criterio">
 			<td>{{contact.name}}</td>
 			<td>{{contact.phone}}</td>
+			<td>{{contact.Operator.description}}</td>
 		</tr>
 	</table>
 
